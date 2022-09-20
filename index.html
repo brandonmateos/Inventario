@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <link rel="stylesheet" media="all" href="estilos.css" />
+</head>
+
+<style>
+    #scroll{
+        border:1px solid;
+        height:100px;
+        width:300px;
+        overflow-y:scroll;
+        overflow-x:hidden;
+    }
+    </style>
+
+<body style="background-image: linear-gradient(105deg, rgb(15, 141, 143) 49%, rgb(30, 177, 66) 86%);">
+
+    <!--NAVEGACION-->
+    <nav  class="navbar navbar-light bg-light">
+        <a  href="/" class="navbar-brand">
+            - INVENTARIO -
+        </a>
+    </nav>
+
+    <div class="container"  >
+        <div id="App" class="row pt-5">
+            <div class="col-md-4" >
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Agregar producto</h4>
+                    </div>
+
+                    <form id="producto-form" class="card-body">
+
+                        <div class="form-group">
+                            <input type="text" id="codigo" class="form-control" placeholder="Codigo">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="nombre" class="form-control" placeholder="Nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="number" id="precio" step="0.01" class="form-control" placeholder="Precio">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="number" id="cantidad" class="form-control" placeholder="Cantidad">
+                        </div>
+
+                        <button type="submit" value="Save" class="btn btn-primary btn-block">
+                            Guardar
+                        </button>
+                    </form>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Buscar O Eliminar</h4>
+                    </div>
+
+                    <form id="producto-Buscar" class="card-body">
+
+                        <div class="form-group">
+                            <input type="text" id="codigoBuscar" class="form-control" placeholder="Codigo">
+                        </div>
+
+                        <button type="submit" value="Buscar" class="btn btn-primary btn-block">
+                            Buscar
+                        </button>
+                    </form>
+
+                    <form id="producto-Eliminar" class="card-body">
+
+                        <div class="form-group">
+                            <input type="text" id="codigoEliminar" class="form-control" placeholder="Codigo">
+                        </div>
+
+                        <button type="submit" value="Delet" class="btn btn-primary btn-block">
+                            Eliminar
+                        </button>
+                    </form>
+                </div>
+
+
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Insertar Producto</h4>
+                    </div>
+
+                    <form id="producto-insertar" class="card-body">
+
+                        <div class="form-group">
+                            <input type="text" id="codigoInsertar" class="form-control" placeholder="Codigo">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="nombreInsertar" class="form-control" placeholder="Nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="number" id="precioInsertar" step="0.01" class="form-control"
+                                placeholder="Precio">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="number" id="cantidadInsertar" class="form-control" placeholder="Cantidad">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="number" id="posicionInsertar" class="form-control" placeholder="Posicion">
+                        </div>
+
+                        <button type="submit" value="insert" class="btn btn-primary btn-block">
+                            Insertar
+                        </button>
+                    </form>
+                </div>
+
+
+
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Mostrar</h4>
+                    </div>
+
+                    <form id="producto-Mostrar" class="card-body">
+                        <button type="submit" value="view" class="btn btn-primary btn-block">
+                            Mostrar
+                        </button>
+                    </form>
+
+                    <form id="producto-invertir" class="card-body">
+                        <button type="submit" value="view" class="btn btn-primary btn-block">
+                            Invertir Lista
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div id="product-list" class="col-md-8">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="src/app.js"></script>
+</body>
+
+</html>
