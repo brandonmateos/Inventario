@@ -10,20 +10,28 @@
     <link rel="stylesheet" media="all" href="estilos.css" />
 </head>
 
-
+<style>
+    #scroll{
+        border:1px solid;
+        height:100px;
+        width:300px;
+        overflow-y:scroll;
+        overflow-x:hidden;
+    }
+    </style>
 
 <body style="background-image: linear-gradient(105deg, rgb(15, 141, 143) 49%, rgb(30, 177, 66) 86%);">
 
     <!--NAVEGACION-->
-    <nav class="navbar navbar-light bg-light">
-        <a href="/" class="navbar-brand">
+    <nav  class="navbar navbar-light bg-light">
+        <a  href="/" class="navbar-brand">
             - INVENTARIO -
         </a>
     </nav>
 
-    <div class="container">
+    <div class="container"  >
         <div id="App" class="row pt-5">
-            <div style="overflow-y: scroll; height:530px; " class="col-md-4">
+            <div class="col-md-4" >
                 <div class="card">
                     <div class="card-header">
                         <h4>Agregar producto</h4>
@@ -141,13 +149,13 @@
 
             </div>
 
-            <div style="overflow-y: scroll; height:530px " id="product-list" class="col-md-8">
+            <div id="product-list" class="col-md-8">
 
             </div>
         </div>
     </div>
 
-    <script src="src/app.js" type="module"></script>
+    <script src="src/app.js"></script>
 </body>
 
 </html>
